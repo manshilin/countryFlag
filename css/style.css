@@ -1,0 +1,19 @@
+h1 {
+    color: green;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("../images/0.jpg") ;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
