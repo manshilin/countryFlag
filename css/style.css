@@ -1,6 +1,3 @@
-h1 {
-    color: green;
-}
 
 html, body {
     padding: 0;
@@ -16,4 +13,35 @@ body {
     -o-background-size: cover;
     background-size: cover;
     position: relative;
+   
+   
+}
+
+#options {
+    float: right;
+    height: 40px;
+    margin: 10px;
+}
+#options div {
+    float: left;
+    cursor: pointer;
+}
+#options #score {
+    color: rgb(0, 0, 0);
+    font-size: 48px;
+    margin: 18px 40px;
+}
+    
+}
+ #sound  {
+    height: 100px;
+    width: 100px;
+    float: right;
+    margin-top: 30px 50px;
+
+}
+
+#sound img {
+    height: 100%;
+    width: 100%;
 }
