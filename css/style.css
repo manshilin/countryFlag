@@ -1,47 +1,76 @@
 
-html, body {
-    padding: 0;
-    margin: 0;
-}
 
+html, body {
+	padding: 0;
+	margin: 0;
+}
 body {
-    background: url("../images/0.jpg") ;
-    font-weight: normal;
-    font-style: normal;
+	background: url(../images/0.jpg) no-repeat center top fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    position: relative;
-   
-   
+    
+	font-family: "STARWARS", sans-serif;
 }
 
 #options {
-    float: right;
-    height: 40px;
-    margin: 10px;
+    height: 100px;
+    width: 100px;
 }
 #options div {
-    float: left;
-    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    
+    
+
 }
 #options #score {
-    color: rgb(0, 0, 0);
+    color: rgb(65, 7, 128);
     font-size: 48px;
     margin: 18px 40px;
+     
+
 }
     
 }
  #sound  {
     height: 100px;
     width: 100px;
-    float: right;
     margin-top: 30px 50px;
-
+    cursor: pointer;
 }
 
 #sound img {
     height: 100%;
     width: 100%;
+}
+
+.game_field {
+    background: #A2BFD7;
+    width: 1200px;
+    height: 1000px;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 0 auto;
+    margin-top: 180px;
+    
+    
+}
+
+.game_field ul {
+    width: 810px;
+    height: 650px;
+    
+    
+
+}
+
+.game_field ul li {
+    float: left;
+    height: 270px;
+    width: 320px;
+    margin: 20 px 20px;
+    padding-left: 30px;
+    text-decoration: none;
 }
