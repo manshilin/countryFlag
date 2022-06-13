@@ -34,9 +34,13 @@ let imgFlag = getImages(11);*/
 let images = [
     1, 2, 3, 4,
     5, 6, 7, 8,
-    9, 10, 11 ,12
+    9, 10, 11 
 
 ]
+
+let imagesRandom = [];
+imagesRandom = images.sort(()=>Math.random()-0.5);
+
 
 
 let cardsField = document.querySelector("#flag");
@@ -47,7 +51,7 @@ for(let i = 0; i < 4; i++){
     li.id = i;
     cardsField.appendChild(li);
 
-    li.style.background = "url(images/flags/" + images[i] + ".jpg) no-repeat";
+    li.style.background = "url(images/flags/" + imagesRandom[i] + ".jpg) no-repeat";
        
     
     
