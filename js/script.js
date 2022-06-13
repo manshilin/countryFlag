@@ -52,6 +52,15 @@ for(let i = 0; i < 4; i++){
     cardsField.appendChild(li);
 
     li.style.background = "url(images/flags/" + imagesRandom[i] + ".jpg) no-repeat";
+    
+    // удаляем из массива выведенные на экран флаги 
+    /*for(let j=0; j<images.length; j++){
+        if(imagesRandom[i] == images[j]) {
+            images.splice(j,1);
+        }
+
+    }
+    console.log(images);*/
        
     
     
