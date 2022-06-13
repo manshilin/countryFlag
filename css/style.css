@@ -80,10 +80,11 @@ body {
 
 #flag {
     text-decoration: none;
+    text-align: center;
 }
 
 .answer {
-    margin: 50px 20px;
+    margin-top: 150px;
     height: 170px;
     width: 950px;
 }
