@@ -50,7 +50,6 @@ let country = [
     "Хорватия", "Чехия", "Швейцария", "Швеция"
 ]
 
-console.dir(country);
 let imagesRandom = [];
 imagesRandom = images.sort(()=>Math.random()-0.5);
 
@@ -74,7 +73,16 @@ for(let i = 0; i < 4; i++){
 
     }
     console.log(images);*/
-       
-    
-    
 }
+
+// блок ответов - список стран
+let answer = document.querySelector(".answer");
+for(var i=0; i < 4; i++){
+    let divAnswer = document.createElement("div");
+    divAnswer.className = "ans" + i;
+    answer.appendChild(divAnswer);
+    divAnswer.innerText = country[i];
+
+}
+
+

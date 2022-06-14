@@ -1,9 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap');
 
 html, body {
 	padding: 0;
 	margin: 0;
 }
+
 body {
 	background: url(../images/0.jpg) no-repeat center top fixed;
     -webkit-background-size: cover;
@@ -18,22 +20,19 @@ body {
     height: 100px;
     width: 100px;
 }
+
 #options div {
     height: 100%;
     width: 100%;
-    
-    
-
 }
+
 #options #score {
     color: rgb(65, 7, 128);
     font-size: 48px;
     margin: 18px 40px;
-     
-
 }
     
-}
+
  #sound  {
     height: 100px;
     width: 100px;
@@ -53,34 +52,21 @@ body {
     border-radius: 10px;
     padding: 2px;
     margin: 0 auto;
-    margin-top: 180px;
-    
-    
+    margin-top: 100px;
 }
 
 .game_field ul {
     width: 810px;
     height: 650px;
-    text-decoration: dotted;
-    
-    
+ }
 
-}
-
-.game_field ul li {
+#flag li {
     float: left;
     height: 270px;
     width: 320px;
-    margin: 20px 20px;
-    padding-left: 30px;
-    
-    
-}
-
-
-#flag {
-    text-decoration: none;
+    margin: 20px 40px;
     text-align: center;
+    list-style: none;
 }
 
 .answer {
@@ -95,8 +81,15 @@ body {
     border: 2px solid black;
     border-radius: 20px;
     float: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 48px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
-#ans1:hover, #ans2:hover, #ans3:hover, #ans4:hover{
+.ans0:hover, .ans1:hover, .ans2:hover, .ans3:hover {
     background: #A2BFD7;
 }
+
