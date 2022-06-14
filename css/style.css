@@ -22,7 +22,6 @@ body {
 }
 
 #options div {
-    height: 100%;
     width: 100%;
 }
 
@@ -33,7 +32,6 @@ body {
     font-size: 34px;
     color: white;
 }
-    
 
 #sound  {
     width: 10px;
@@ -43,8 +41,8 @@ body {
 }
 
 #sound img {
-    height: 100%;
-    width: 100%;
+    height: 50px;
+    width: 50px;
 }
 
 #lifes {
