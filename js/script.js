@@ -52,6 +52,10 @@ let country = [
 
 let imagesRandom = [];
 imagesRandom = images.sort(()=>Math.random()-0.5);
+console.log(imagesRandom);
+
+
+
 
 
 
@@ -71,18 +75,41 @@ for(let i = 0; i < 4; i++){
             images.splice(j,1);
         }
 
-    }
-    console.log(images);*/
+    }*/
+    
 }
 
 // блок ответов - список стран
+let choosedCountry = [];
+let choosedCountryRandom = [];
 let answer = document.querySelector(".answer");
+for(var i=0; i < 4; i++){
+    
+    choosedCountry[i] = country[imagesRandom[i]];
+}
+console.log(choosedCountry);
+shuffle(choosedCountry);
+console.log(choosedCountry);
+
 for(var i=0; i < 4; i++){
     let divAnswer = document.createElement("div");
     divAnswer.className = "ans" + i;
     answer.appendChild(divAnswer);
-    divAnswer.innerText = country[i];
+    divAnswer.innerText = choosedCountry[i];
 
 }
-
-
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    while (0 !== currentIndex) {
+  
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+  }
