@@ -194,3 +194,11 @@ function shuffle(array) {
     }
     
   }
+
+let startBtn = document.querySelector("#startBtn");
+let gameField = document.querySelector(".game_field");
+let startBlock = document.querySelector("#startBlock");
+startBtn.onclick = function (){
+    startBlock.style.display = "none";
+    gameField.style.display = "block";
+}
