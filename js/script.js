@@ -42,29 +42,24 @@ let images = [
 ]
 
 let country = [
-    "Австрия", "Андорра", "Бельгия", "Болгария",
-    "Босния",  "Герцеговина", "Британия", "Венгрия",
-    "Германия", "Дания", "Испания", "Италия", "Кипр",
-    "Литва", "Мальта", "Молдова", "Монако", "Нидерланды",
-    "Норвегия", "Польша", "Румыния", "Финляндия", "Франция",
-    "Хорватия", "Чехия", "Швейцария", "Швеция"
+    "Испания", "Хорватия", "Дания", "Финляндия",
+    "Бельгия",  "Швейцария", "Британия", "Польша",
+    "Германия", "Италия", "Швеция", "Франция", "Нидерланды",
+    "Австрия", "Норвегия", "Чехия", "Румыния", "Венгрия",
+    "Молдова", "Мальта", "Болгария", "Литва", "Кипр",
+    "Эстония", "Монако", "Босния", "Андора"
 ]
 
 let imagesRandom = [];
 imagesRandom = images.sort(()=>Math.random()-0.5);
 console.log(imagesRandom);
 
-
-
-
-
-
 let cardsField = document.querySelector("#flag");
     
 for(let i = 0; i < 4; i++){
     
     let li = document.createElement("li");
-    li.id = i;
+    li.id = "flag" + i;
     cardsField.appendChild(li);
 
     li.style.background = "url(images/flags/" + imagesRandom[i] + ".jpg) no-repeat";
@@ -113,3 +108,33 @@ function shuffle(array) {
   
     return array;
   }
+
+  let ans0 = document.querySelector(".ans0");
+  let ans1 = document.querySelector(".ans1");
+  let ans2 = document.querySelector(".ans2");
+  let ans3 = document.querySelector(".ans3");
+
+  ans0.onclick = function(){
+    ans0Country = ans0.innerText;
+    console.log(ans0Country);
+  }
+
+  ans1.onclick = function(){
+    ans1Country = ans1.innerText;
+    console.log(ans1Country);
+  }
+
+  ans2.onclick = function(){
+    ans2Country = ans2.innerText;
+    console.log(ans2Country);
+  }
+
+  ans3.onclick = function(){
+    ans3Country = ans3.innerText;
+    console.log(ans3Country);
+  }
+
+  let flag0 = document.querySelector("#flag0");
+  let flag1 = document.querySelector("#flag1");
+  let flag2 = document.querySelector("#flag2");
+  let flag3 = document.querySelector("#flag3");
