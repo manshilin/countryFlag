@@ -29,8 +29,6 @@ function getImages(n){
 let imgFlag = getImages(11);*/
 
 //добавляю картинки с флагами  в игровое поле
-
-
 let images = [
     0, 1, 2, 3,
     4,5, 6, 7, 
@@ -49,11 +47,12 @@ let country = [
     "Молдова", "Мальта", "Болгария", "Литва", "Кипр",
     "Эстония", "Монако", "Босния", "Андора"
 ]
-
+// массив перемешанных случайным образом номеров картинок
 let imagesRandom = [];
 imagesRandom = images.sort(()=>Math.random()-0.5);
 console.log(imagesRandom);
 
+//Выводим 4 случайных флага на экран
 let cardsField = document.querySelector("#flag");
     
 for(let i = 0; i < 4; i++){
@@ -63,29 +62,33 @@ for(let i = 0; i < 4; i++){
     cardsField.appendChild(li);
 
     li.style.background = "url(images/flags/" + imagesRandom[i] + ".jpg) no-repeat";
-    
+
     // удаляем из массива выведенные на экран флаги 
     /*for(let j=0; j<images.length; j++){
         if(imagesRandom[i] == images[j]) {
             images.splice(j,1);
         }
-
     }*/
-    
 }
 
 // блок ответов - список стран
 let choosedCountry = [];
-let choosedCountryRandom = [];
+
+// Создаем блок выводящий 4 варианта названия страны 
 let answer = document.querySelector(".answer");
+// записываем страны флаги которых вывели на экран
 for(var i=0; i < 4; i++){
     
     choosedCountry[i] = country[imagesRandom[i]];
 }
+
+
 console.log(choosedCountry);
+// перемещываем случайным образом названия стран, флаги которых выведены на экран 
 shuffle(choosedCountry);
 console.log(choosedCountry);
 
+// создаем четыре div со случайными названиями стран, выведенных флагов
 for(var i=0; i < 4; i++){
     let divAnswer = document.createElement("div");
     divAnswer.className = "ans" + i;
@@ -93,6 +96,7 @@ for(var i=0; i < 4; i++){
     divAnswer.innerText = choosedCountry[i];
 
 }
+// функция перемешивания элементов массива случайным образом
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
@@ -115,26 +119,78 @@ function shuffle(array) {
   let ans3 = document.querySelector(".ans3");
 
   ans0.onclick = function(){
-    ans0Country = ans0.innerText;
-    console.log(ans0Country);
+    ansCountry = ans0.innerText;
+    console.log(ansCountry);
   }
 
   ans1.onclick = function(){
-    ans1Country = ans1.innerText;
-    console.log(ans1Country);
+    ansCountry = ans1.innerText;
+    console.log(ansCountry);
   }
 
   ans2.onclick = function(){
-    ans2Country = ans2.innerText;
-    console.log(ans2Country);
+    ansCountry = ans2.innerText;
+    console.log(ansCountry);
   }
 
   ans3.onclick = function(){
-    ans3Country = ans3.innerText;
-    console.log(ans3Country);
+    ansCountry = ans3.innerText;
+    console.log(ansCountry);
   }
 
   let flag0 = document.querySelector("#flag0");
   let flag1 = document.querySelector("#flag1");
   let flag2 = document.querySelector("#flag2");
   let flag3 = document.querySelector("#flag3");
+
+  flag0.onclick = function(){
+    console.log(ansCountry);
+    console.log(imagesRandom);
+
+    if(ansCountry == imagesRandom[0]) {
+        alert('You win');
+    }
+    else {
+        alert("You are looser")
+    }
+    
+  }
+
+  flag1.onclick = function(){
+    console.log(ansCountry);
+    console.log(imagesRandom);
+
+    if(ansCountry == country[imagesRandom[1]]) {
+        alert('You win');
+    }
+    else {
+        alert("You are looser")
+    }
+    
+  }
+
+  flag2.onclick = function(){
+    console.log(ansCountry);
+    console.log(imagesRandom);
+
+    if(ansCountry == country[imagesRandom[2]]) {
+        alert('You win');
+    }
+    else {
+        alert("You are looser")
+    }
+    
+  }
+
+  flag3.onclick = function(){
+    console.log(ansCountry);
+    console.log(imagesRandom);
+
+    if(ansCountry == country[imagesRandom[3]]) {
+        alert('You win');
+    }
+    else {
+        alert("You are looser")
+    }
+    
+  }
