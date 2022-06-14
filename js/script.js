@@ -147,7 +147,7 @@ function shuffle(array) {
     console.log(ansCountry);
     console.log(imagesRandom);
 
-    if(ansCountry == imagesRandom[0]) {
+    if(ansCountry == country[imagesRandom[0]]) {
         alert('You win');
     }
     else {
