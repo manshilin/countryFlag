@@ -148,9 +148,11 @@ function shuffle(array) {
     console.log(imagesRandom);
 
     if(ansCountry == country[imagesRandom[0]]) {
+        scorePlus();
         alert('You win');
     }
     else {
+        die();
         alert("You are looser")
     }
     
@@ -161,9 +163,11 @@ function shuffle(array) {
     console.log(imagesRandom);
 
     if(ansCountry == country[imagesRandom[1]]) {
+        scorePlus();
         alert('You win');
     }
     else {
+        die();
         alert("You are looser")
     }
     
@@ -174,9 +178,11 @@ function shuffle(array) {
     console.log(imagesRandom);
 
     if(ansCountry == country[imagesRandom[2]]) {
+        scorePlus();
         alert('You win');
     }
     else {
+        die();
         alert("You are looser")
     }
     
@@ -187,9 +193,11 @@ function shuffle(array) {
     console.log(imagesRandom);
 
     if(ansCountry == country[imagesRandom[3]]) {
+        scorePlus();
         alert('You win');
     }
     else {
+        die();
         alert("You are looser")
     }
     
@@ -201,4 +209,46 @@ let startBlock = document.querySelector("#startBlock");
 startBtn.onclick = function (){
     startBlock.style.display = "none";
     gameField.style.display = "block";
+    createLifes();
+}
+
+score = document.querySelector("#score span");
+
+function scorePlus (){
+    countScore = score.innerText;
+    points = Number.parseInt(countScore);
+    points = points + 1;
+    score.innerText = points;
+}
+
+countLifes = 3;
+
+function createLifes () {
+    //создаем блок жизней
+    let lifesBlock = document.querySelector("#lifes");
+        //делаем его пустым
+        lifesBlock.innerHTML = "";
+    //переменая
+    let count = 0;
+    //делаем цикл создание сердечек
+    while (count < countLifes) {
+        //создаем сердечко
+        let span = document.createElement("span");
+        //вставляем в поле
+        lifesBlock.appendChild(span);
+        //меняем переменую
+        count = count + 1;
+    }
+}
+
+function die () {
+    //отнимаем жизнь
+    countLifes = countLifes - 1;
+    //проверяем количество жизней
+    if (countLifes <= 0) {
+        //выводим текст
+        alert("Game Over!!");
+    }
+    //создаем жизни
+    createLifes();
 }
